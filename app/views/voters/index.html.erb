@@ -1,0 +1,5 @@
+<% if current_user.field == 'Territory' %>
+  <%= render 'territory' %>
+<% elsif current_user.field == 'BEC' %>
+  <%= render 'bec' %>
+<% end %>

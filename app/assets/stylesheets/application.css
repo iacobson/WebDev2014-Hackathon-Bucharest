@@ -1,0 +1,145 @@
+/*
+ * This is a manifest file that'll be compiled into application.css, which will include all the files
+ * listed below.
+ *
+ * Any CSS and SCSS file within this directory, lib/assets/stylesheets, vendor/assets/stylesheets,
+ * or vendor/assets/stylesheets of plugins, if any, can be referenced here using a relative path.
+ *
+ * You're free to add application-wide styles to this file and they'll appear at the bottom of the
+ * compiled file so the styles you add here take precedence over styles defined in any styles
+ * defined in the other CSS/SCSS files in this directory. It is generally better to create a new
+ * file per style scope.
+ *
+ *= require_tree .
+ *= require_self
+ */
+
+
+ body {
+	background-color: #F1F1E4;
+	margin: 0px; 
+	padding: 0px;
+	font-family: arial;
+	min-width: 1300px;
+}
+
+#title {
+	height: 50px;
+	background-color: #9E3D54;
+	overflow: hidden;
+	border-bottom: 1px solid #4A4B4C;
+	padding: 1% 2% 1% 2%;
+	display: block;
+	position: relative;
+	width: 96%;
+	min-width: 900px;  /*content will not move on next line on window resizing*/
+}
+
+.subtitle{
+	color: #9E3D54;
+	font-size: 2.5em;
+	font-weight: bold;
+    text-align: center;
+    margin: 15px;
+}
+
+h1 {
+	color: #F1F1E4;
+	font-size: 2.5em;
+	font-weight: bold;
+    text-align: center;
+    margin: auto;
+}
+
+#login {
+	color: #F1F1E4;
+}
+
+#application {
+	overflow: hidden;
+	margin: 3% 4% 3% 4%;
+	display: block;
+	position: relative;
+	min-width: 1300px;  /*content will not move on next line on window resizing*/
+}
+
+.content {
+	display: inline-block;
+	width: 95%;
+	margin: 0px 15px 50px auto;
+	border: 1px solid #ECEBD7;
+	border-bottom: 2px solid #ECEBD7;
+	border-right: 2px solid #ECEBD7;
+	background-color: #fff;
+	padding: 0px 10px 20px 10px;
+	text-align: justify;
+	border-radius: 5px;
+}
+
+.content th {
+	font-size: 1em;
+	line-height: 1.2em;
+	color: #9E3D54;
+	text-align: left;
+	border-bottom: 1px solid #ECEBD7;
+	padding-right: 40px;
+
+}
+
+.content td {
+	font-size: 0.9em;
+	color: #4A4B4C;
+	text-align: left;
+	padding-right: 20px;
+	min-width: 60px;
+}
+
+#cnp {
+	width: 25%;
+	height: 32px;
+	font-size: 1.1em;
+	font-weight: bolder;
+	padding-left: 10px;
+	border: 1px solid #ECEBD7;
+	color: #9E3D54;
+	border-radius: 5px;
+	margin-right: 40px;
+}
+
+#description {
+	width: 50%;
+	height: 50px;
+}
+
+.button {
+	width: 10%;
+
+	height: 36px;
+	font-size: 1.2em;
+	color: #F1F1E4;
+	border-radius: 5px;
+	background-color: #9E3D54;
+	border: 2px solid #ECEBD7;
+}
+
+.button:hover:enabled {
+	border: 2px solid #4A4B4C;
+}
+
+.button:active:enabled {
+	background-color: #84404E;
+}
+
+.button:disabled {
+	background-color: grey;
+}
+
+.app_text {
+	color:grey;
+}
+
+.app_link {
+	font-size: 1.2em;
+	font-weight: bolder;
+	color: #9E3D54;
+}

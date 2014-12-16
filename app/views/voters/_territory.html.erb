@@ -1,0 +1,24 @@
+
+
+
+<div class="content">
+<% session[:found_voter] = nil %>
+<%= form_tag search_voter_path do %>
+<p>
+<%= text_field_tag :cnp, params[:cnp] %>
+<%= submit_tag "Search Voter", :class => "button" %>
+</p>
+<% end %>
+
+
+<% if @cnp_voter == nil%>
+<p class="app_text"> Insert Voter CNP </p>
+
+<% else %>
+
+
+<p class="app_text"> CNP was identified: <%= @voters.find(@cnp_voter).cnp %> </p>
+<div class="app_link"><%= link_to 'Validate', showvoters_path(:cnp => @voters.find(@cnp_voter).cnp) %></div>
+<% end %>
+
+</div>

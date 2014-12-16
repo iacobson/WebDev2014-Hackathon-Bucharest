@@ -1,0 +1,113 @@
+<div class="content">
+
+<h2 class="subtitle">VOTING PAGE</h2>
+
+<%= button_to 'VOTE', votetime_path(:cnp => @cnp_id), :disabled => @voter.user, :class => "button" %>
+
+
+<% if @voter.user %>
+
+  <h3> ALLERT: CNP <%= @voter.cnp %> already voted at <%= (@voter.updated_at + 2.hours).strftime('%a, %d %b %Y %H:%M:%S') %> ! </h3>
+  <p><strong>First Name:</strong> <%= @voter.first_name %> </p>
+  <p><strong>Last Name:</strong> <%= @voter.last_name %> </p>
+  <p><strong>Address:</strong> <%= @voter.address %> </p>
+
+
+
+  <br>
+  <br>
+
+</div>
+
+<div class="content">
+
+
+  <h3> Vote validated by: </h3>
+
+  <table>
+    <thead>
+      <tr>
+        <th>Last name</th>
+        <th>First name</th>
+        <th>Voting Section</th>
+        <th>Time</th>
+        <th colspan="3"></th>
+      </tr>
+    </thead>
+
+    <tbody>
+      <tr>
+        <td><%= @voter.user.last_name %></td>
+        <td><%= @voter.user.first_name %></td>
+        <td><%= @voter.user.voting_section %></td>
+        <td><%= (@voter.updated_at + 2.hours).strftime('%a, %d %b %Y %H:%M:%S') %></td>
+      </tr>
+    </tbody>
+  </table>
+
+<% else %>
+
+  <h3>CNP <%= @voter.cnp %> didn't vote yet! </h3>
+
+<% end %>
+
+
+
+
+
+
+<br>
+
+
+
+
+<% if @voter.user_id != nil  %>
+
+
+
+<%= button_to 'NEW VOTE', double_voting_path(:cnp => @cnp_id), :class => "button"%>
+
+
+
+
+
+<% if session[:new_vote_validation] == true %>
+
+<% session[:new_vote_validation] = false %>
+
+<br>
+
+<h2> Declaratie pe proprie raspundere </h2>
+
+<p> Subsemnatul <%= @voter.last_name %> <%= @voter.first_name %>, domiciliat in <%= @voter.address %> , declar pe proprie raspundere, sub incidenta legii penale, ca nu am votat in sectia <%= @voter.user.voting_section %> la <%= @voter.updated_at %> si solicit exercitarea dreptului la vot.
+
+<br>
+
+<%= form_tag create_alert_path(:cnp => @cnp_id) do  %>     <!-- alert_path in voters, retine CNP -->
+
+  <div class="field">
+
+      <%= hidden_field_tag :voter_cnp, @voter.cnp %>
+      <%= hidden_field_tag :current_user_id, current_user.id %>
+      <%= hidden_field_tag :user_id, @voter.user_id %>
+      <%= hidden_field_tag :time, @voter.updated_at %>    
+
+      <strong><%= label_tag :description, "Comentariile reprezentantului biroului electoral" %></strong>
+      <br>
+      <%= text_area_tag :description %>
+
+    </div>
+
+    <div class="actions">
+      <%= submit_tag "Submit Request" , class: 'button'%>
+    </div>
+   
+  <% end %>
+
+  <% end %> 
+
+<% end %>
+
+</div>
+
+<%= link_to "Back", voters_path %>

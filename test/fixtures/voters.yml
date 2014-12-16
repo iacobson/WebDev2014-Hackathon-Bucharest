@@ -1,0 +1,17 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  cnp: 1
+  last_name: MyString
+  first_name: MyString
+  address: MyString
+  zone: MyString
+  user_id: 
+
+two:
+  cnp: 1
+  last_name: MyString
+  first_name: MyString
+  address: MyString
+  zone: MyString
+  user_id: 

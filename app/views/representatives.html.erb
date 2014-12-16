@@ -1,0 +1,44 @@
+
+</center>
+
+
+<style>
+table, th, td {
+    border: 1px solid grey;
+    border-collapse: collapse;
+    background-color: white;
+}
+th,td {
+padding:10px;
+text-align:left;
+}
+</style>
+
+
+<center>
+
+<table>
+  <thead>
+    <tr>
+      <th>Last name</th>
+      <th>First name</th>
+      <th>Voting Section</th>
+
+    </tr>
+  </thead>
+  <tbody>
+      
+    <% @territory_users.each do |user| %>
+      <tr>
+				<td><%= user.last_name %></td>
+        	<td><%= user.first_name %></td>
+        	<td><%= user.voting_section %></td>
+		<% end %>
+      </tr>
+  </tbody>
+</table>
+
+</center>
+
+<%= link_to 'Back', voters_path %>
+

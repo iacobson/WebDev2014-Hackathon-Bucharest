@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>SISTEMUL DE VALIDARE ELECTRONICA A VOTURILOR</title>
+  <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track' => true %>
+  <%= javascript_include_tag 'application', 'data-turbolinks-track' => true %>
+  <%= csrf_meta_tags %>
+</head>
+<body>
+
+<div id="title">
+<h1> 
+SISTEMUL DE VALIDARE ELECTRONICA A VOTURILOR 
+</h1>
+<br>
+<% if user_signed_in? %> 
+	<div id="login"> 
+		logged in as : <strong><%= current_user.email %></strong> <!-- current_username is a DEVISE parameter --> 
+		<%= link_to('Logout', destroy_user_session_path, :method => :delete) %> 
+	</div>
+
+<% end %>
+
+</div>
+
+<div id='application'>
+	<%= yield %>
+</div>
+
+</body>
+</html>

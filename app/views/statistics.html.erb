@@ -1,0 +1,220 @@
+<style>
+
+</style> 
+<br>
+
+<center>
+<h2>
+Real Time Statistics
+</h2>
+</center>
+
+
+<style>
+table, th, td {
+    border: 1px solid grey;
+    border-collapse: collapse;
+    background-color: white;
+}
+th,td {
+padding:8px;
+text-align:left;
+}
+</style>
+<center>
+
+<table>
+  <thead>
+    <tr>
+      <th> <h3> Global statistics</h3> </th>
+    </tr>
+  </thead>
+
+ <tbody>
+<tr>
+<td>Votantii cu media de varsta intre 18-30 ani: <%= @listyoung.size %> --- <%= @percentlistyoung %>%</td>
+
+ </tbody>
+<tr>
+<tbody>
+<td>Votantii cu media de varsta intre 31-60 ani: <%= @listavg.size %> --- <%= @percentlistavg %>%</td> </tr>
+</tbody>
+
+<tr>
+<tbody>
+<td>Votantii cu media de varsta intre > 60 ani: <%= @listold.size %> --- <%= @percentlistold %>%</td>
+</tr>
+</tbody>
+
+<tr>
+<tbody>
+<td>Votantii barbati: <%= @listmen.size %> --- <%= @percentlistmen %>%
+</td>
+</tr>
+</tbody>
+
+
+<tr>
+<tbody>
+<td>Votantii femei: <%= @listwomen.size %> --- <%= @percentlistwomen %>%</td>
+</tr>
+</tbody>
+
+
+
+<tr>
+<tbody>
+<td>Votantii din zona rurala: <%= @listrural.size %> --- <%= @percentlistrural %>%</td>
+</tr>
+</tbody>
+
+
+<tr>
+<tbody>
+<td>Votantii din zona urbana: <%= @listurban.size %> --- <%= @percentlisturban %>%</td>
+</tr>
+</tbody>
+
+<tr>
+<tbody>
+<td>Votantii din Bucuresti: <%= @listbuc.size %> --- <%= @percentlistbuc %>%</td>
+</tr>
+</tbody>
+
+<tr>
+<tbody>
+<td>Votantii din Timisoara: <%= @listtim.size %> --- <%= @percentlisttim %>%</td>
+</tr>
+</tbody>
+
+<tr>
+<tbody>
+<td>Votantii din Rosieni: <%= @listros.size %> --- <%= @percentlistros %>% </td>
+</tr>
+</tbody>
+
+<tr>
+<tbody>
+<td>Votantii din Badesti: <%= @listbad.size %> --- <%= @percentlistbad %>% </td>
+</tr>
+</tbody>
+
+
+</tr>  
+  </tbody>
+</table>
+
+
+
+ </center>
+
+
+
+<br><br><br><br>
+
+
+<center>
+<h2>
+Prezenta la vot ------- <%= @listvoters.size %> ------- <%= @percentlistvoters %>%
+</h2>
+
+
+
+<table>
+  <thead>
+    <tr>
+      <th> <h3> Voting statistics </h3> </th>
+    </tr>
+  </thead>
+
+ <tbody>
+<tr>
+<td>
+Votantii cu media de varsta intre 18-30 ani: <%= @vlistyoung.size %> --- <%= @vpercentlistyoung %>%
+ </tbody>
+</tr>
+</td>
+
+ <tbody>
+<tr>
+<td>
+Votantii cu media de varsta intre 31-60 ani: <%= @vlistavg.size %> --- <%= @vpercentlistavg %>%
+</tbody>
+</tr>
+</td>
+
+ <tbody>
+<tr>
+<td>
+Votantii cu media de varsta intre > 60 ani: <%= @vlistold.size %> --- <%= @vpercentlistold %>%
+</tbody>
+</tr>
+</td>
+
+ <tbody>
+<tr>
+<td>
+Votantii barbati: <%= @vlistmen.size %> --- <%= @vpercentlistmen %>%
+</tbody>
+</tr>
+</td>
+
+ <tbody>
+<tr>
+<td>
+Votantii femei: <%= @vlistwomen.size %> --- <%= @vpercentlistwomen %>%
+</tbody>
+</tr>
+</td>
+
+ <tbody>
+<tr>
+<td>
+Votantii din zona rurala: <%= @vlistrural.size %> --- <%= @vpercentlistrural %>%
+</tbody>
+</tr>
+</td>
+
+ <tbody>
+<tr>
+<td>
+Votantii din zona urbana: <%= @vlisturban.size %> --- <%= @vpercentlisturban %>%
+</tbody>
+</tr>
+</td>
+
+ <tbody>
+<tr>
+<td>
+Votantii din Bucuresti: <%= @vlistbuc.size %> --- <%= @vpercentlistbuc %>%
+</tbody>
+</tr>
+</td>
+
+ <tbody>
+<tr>
+<td>
+Votantii din Timisoara: <%= @vlisttim.size %> --- <%= @vpercentlisttim %>%
+</tbody>
+</tr>
+</td>
+
+ <tbody>
+<tr>
+<td>
+Votantii din Rosieni: <%= @vlistros.size %> --- <%= @vpercentlistros %>%
+</tbody>
+</tr>
+</td>
+
+ <tbody>
+<tr>
+<td>
+Votantii din Badesti: <%= @vlistbad.size %> --- <%= @vpercentlistbad %>%
+ </tbody>
+</tr>
+</td>
+
+</table>
+
+<%= link_to 'Back', voters_path %>
